@@ -1,0 +1,24 @@
+{
+  "name": "messageboard",
+  "version": "0.0.1",
+  "description": "Message Board assignment, Coding Dojo MEAN stack July 2017",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Andonon/CD_MEAN_MessageBoard.git"
+  },
+  "author": "Troy Center",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Andonon/CD_MEAN_MessageBoard/issues"
+  },
+  "homepage": "https://github.com/Andonon/CD_MEAN_MessageBoard#readme",
+  "dependencies": {
+    "ejs": "^2.5.6",
+    "express": "^4.15.3",
+    "jquery": "^3.2.1"
+  }
+}
