@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <title>Message Board</title>
+        <meta description='Message Board app home page'
+        <meta charset='utf-8'/>
+        <link rel='stylesheet' type='text/css' href='css/styles.css' />
+    </head>
+    <body>
+        <div id='wrapper'>
+            <h3>The Dojo Message Board</h3>
+            <br><hr><br>
+            <div id='mainform'>
+                <form id='messageform' action='/newmessage' method='POST'>
+                    <label for="name">Name:</label><br>
+                    <input type="text" name="name" value=""><br>
+                    <label for="message">Message:</label><br>
+                    <textarea rows="4" cols="70"></textarea><br>
+                    <input type="submit" name="submit" value="Post message">                   
+                </form>
+            </div>
+            <div id='message'> 
+                <p>Sample Message</p>
+                <div id='comments'>
+                    <p>sample comment</p>
+                    <div id='commentform'>
+                        <p>comment for goes here</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
