@@ -57,14 +57,17 @@ var Comment = mongoose.model('Comment');
 ///////////////////////////////////////////////////
 app.get('/', function (req, res){
     console.log("*****************************************************");
-    console.log("In app.js ROOT Route");
+    console.log("In app.js ROOT Route")
     console.log("*****************************************************");
-    Message.find({}, function(err, messages){
+    Message.find({})
+        .populate('comments')
+        .exec(function(err, messages){
         if(err){
             console.log("Error retrieving data from db... ", err);
             res.redirect('/');
         } else {
             console.log("Success getting Messages from db: ", messages);
+            console.log("88888888", messages[0].comments.length)
             res.render('index', {messages: messages});
         }
     });
@@ -89,7 +92,7 @@ app.post('/newcomment', function(req, res){
             res.redirect('/');
         } else {
             const comment = new Comment({name: req.body.name, comment: req.body.comment, _message: req.body.messageid});
-            message.comments.push(req.body.messageid);
+            message.comments.push(comment);
             comment.save(function(err){
                 message.save(function(err){
                         if(err){ 
